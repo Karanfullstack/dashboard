@@ -4,8 +4,8 @@ const Widgets = ({color, heading, amount, value, percent}: WidgetsProps) => {
 	return (
 		<article className=" flex justify-between gap-2 p-7 bg-white w-fit shadow-lg rounded-lg ">
 			<div>
-				<p className="text-md opacity-65">{heading}</p>
-				<h4 className="text-lg font-bold">{`${
+				<p className="text-md font-semibold opacity-65">{heading}</p>
+				<h4 className="text-lg tracking-wide font-bold">{`${
 					amount ? "$" + value : value
 				}`}</h4>
 
@@ -28,7 +28,7 @@ const Widgets = ({color, heading, amount, value, percent}: WidgetsProps) => {
 				}}
 				className="cibefore relative w-20 h-20 grid place-items-center rounded-[50%]"
 			>
-				<span className=" z-40">{percent}%</span>
+				<span style={{color}} className=" z-40">{percent}%</span>
 			</div>
 		</article>
 	);

@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import {Dashboard, CartMenu, Apps} from "../../config/sideMenu";
+import {Dashboard, CartMenu, Apps} from "../config/sideMenu";
 import {useLocation} from "react-router-dom";
 const SideBar = () => {
 	const location = useLocation();

@@ -7,7 +7,7 @@ const Search = () => {
 			<div className="flex h-6 justify-between items-center">
 				<BsSearch />
 				<input
-					className="w-full outline-0 p-2 bg-inherit"
+					className="w-full opacity-65 text-gray-600 tracking-wider outline-0 p-2 bg-inherit"
 					type="text"
 					placeholder="Search for data, docs"
 				/>
