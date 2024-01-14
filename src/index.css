@@ -13,3 +13,10 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+@layer utilities {
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+}

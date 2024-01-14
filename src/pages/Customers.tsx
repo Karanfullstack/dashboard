@@ -1,9 +1,12 @@
-
+import Layout from "./Layout";
 
 const Customers = () => {
-  return (
-    <div>Customers</div>
-  )
-}
+	console.log("customers");
+	return (
+		<Layout>
+			<div>Customeres</div>
+		</Layout>
+	);
+};
 
-export default Customers
+export default Customers;

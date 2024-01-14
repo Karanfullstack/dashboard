@@ -1,9 +1,12 @@
-
+import Layout from "./Layout";
 
 const Transactions = () => {
-  return (
-    <div>Transactions</div>
-  )
-}
+	console.log("transaction");
+	return (
+		<Layout>
+			<div>Products</div>
+		</Layout>
+	);
+};
 
-export default Transactions
+export default Transactions;

@@ -5,7 +5,7 @@ import Loader from "./components/Loader";
 const Customers = lazy(() => import("./pages/Customers"));
 const Transactions = lazy(() => import("./pages/Transactions"));
 const Products = lazy(() => import("./pages/Products"));
-const Dashboard = lazy(() => import("./pages/Dashboard"));
+const Dashboard = lazy(() => import("./pages/DashBoard"));
 
 function App() {
 	return (
