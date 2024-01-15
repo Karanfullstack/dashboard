@@ -13,7 +13,7 @@ const Layout = ({children}: ChildProps) => {
 			</div>
 
 			{/* main content */}
-			<main className="col-span-8 overflow-y-auto no-scrollbar scroll-smooth">
+			<main className="col-span-8 overflow-y-auto no-scrollbar">
 				{children}
 			</main>
 		</div>
