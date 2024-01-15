@@ -3,7 +3,7 @@ import Layout from "./Layout";
 import Widgets from "../components/dashboard/Widgets";
 import Search from "../components/dashboard/Search";
 import Inventory from "../components/dashboard/Inventory";
-import RevenuChart from "../components/dashboard/revenuchart";
+import RevenuChart from "../components/dashboard/RevenuChart"
 import {categories} from "../assets/intentory.json";
 const Dashboard = () => {
 	return (
@@ -27,7 +27,7 @@ const Dashboard = () => {
 						amount={true}
 						value={2300}
 						heading="Users"
-						percent={10}
+						percent={50}
 					/>
 
 					<Widgets
@@ -52,7 +52,7 @@ const Dashboard = () => {
 					<RevenuChart />
 
 					{/* Intentory */}
-					<div className="bg-white shadow-md h-fit  rounded-lg  max-w-[250px] px-3 w-full pb-8 flex flex-col justify-center items-center">
+					<div className="bg-white shadow-md h-fit  rounded-lg  max-w-[250px] p-5 w-full  flex flex-col justify-center items-center">
 						<h2 className="text-md uppercase tracking-widest  font-bold my-4 mx-2 text-gray-500 opacity-75">
 							Inventory
 						</h2>
