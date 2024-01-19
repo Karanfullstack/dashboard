@@ -7,15 +7,17 @@ import {
 	Tooltip,
 	Legend,
 	ChartData,
+	ArcElement,
 	ChartOptions,
 } from "chart.js";
 
-import {Bar} from "react-chartjs-2";
+import { Bar, Doughnut } from "react-chartjs-2";
 
 ChartJS.register(
 	CategoryScale,
 	LinearScale,
 	BarElement,
+	ArcElement,
 	Title,
 	Tooltip,
 	Legend
@@ -29,8 +31,6 @@ export const BarChart = ({
 	title2,
 	horizontal = false,
 	labels = months,
-	bgColor1,
-	bgColor2,
 	data1,
 	data2,
 }: ILineChart) => {
@@ -69,11 +69,15 @@ export const BarChart = ({
 				data: data1,
 				categoryPercentage: 0.7,
 				backgroundColor: "rgba(255, 99, 132, 0.5)",
+				barThickness: "flex",
+				barPercentage: 0.8,
 			},
 			{
 				label: title2,
 				data: data2,
 				backgroundColor: "rgba(53, 162, 235, 0.5)",
+				barThickness: "flex",
+				barPercentage: 0.8,
 			},
 		],
 	};
@@ -90,3 +94,48 @@ interface ILineChart {
 	bgColor2?: string;
 	horizontal?: boolean;
 }
+
+// interface for doughnut chart
+interface IDoughnut {
+	labels: string[];
+	data: number[];
+	backgroundColor?: string[];
+	cutout?: number;
+	legends?: boolean;
+	offset?: number[];
+}
+
+export const DoughnutChart = ({
+	labels,
+	data,
+	backgroundColor,
+	cutout = 80,
+	legends = true,
+	offset,
+}: IDoughnut) => {
+	const dougnutData: ChartData<"doughnut", number[], string> = {
+		labels,
+		datasets: [
+			{
+				data,
+				backgroundColor,
+				borderWidth: 2,
+				offset,
+			},
+		],
+	};
+	const dougnutOptions: ChartOptions<"doughnut"> = {
+		responsive: true,
+		plugins: {
+			legend: {
+				display: legends,
+				position: "bottom",
+				labels: {
+					padding: 10,
+				},
+			},
+		},
+		cutout,
+	};
+	return <Doughnut data={dougnutData} options={dougnutOptions} />;
+};

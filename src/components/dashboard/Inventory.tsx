@@ -5,13 +5,13 @@ interface InventoryProps {
 	}[];
 }
 
-const Inventory = ({categories}: InventoryProps) => {
+const Inventory = ({ categories }: InventoryProps) => {
 	return (
 		<>
 			{categories.map((item) => (
 				<div
 					key={item.heading}
-					className=" w-full my-2 font-[700] text-gray-500 place-items-center gap-3 grid grid-cols-8 p-2"
+					className=" w-full my-2   text-gray-500 place-items-center gap-4 grid grid-cols-8 p-3"
 				>
 					<div className=" col-span-2">
 						<h5 className="text-xs tracking-wide">
@@ -20,10 +20,10 @@ const Inventory = ({categories}: InventoryProps) => {
 					</div>
 
 					{/* bar */}
-					<div className="w-full col-span-4 px-1">
-						<div className=" w-full relative  overflow-hidden   h-3  bg-gray-100 rounded-lg border">
+					<div className="w-full col-span-4 px-2">
+						<div className=" w-full relative  overflow-hidden   h-2  bg-gray-100 rounded-lg ">
 							<div
-								className=" bg-red-400 h-full absolute"
+								className="  h-full absolute"
 								style={{
 									width: `${item.value}%`,
 									backgroundColor: `hsl(${item.value * 4}, 50%, 60%)`,

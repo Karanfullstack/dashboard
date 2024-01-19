@@ -1,7 +1,7 @@
-import {useEffect, useState} from "react";
-import {HiTrendingUp, HiTrendingDown} from "react-icons/hi";
+import { useEffect, useState } from "react";
+import { HiTrendingUp, HiTrendingDown } from "react-icons/hi";
 
-const Widgets = ({color, heading, amount, value, percent}: WidgetsProps) => {
+const Widgets = ({ color, heading, amount, value, percent }: WidgetsProps) => {
 	const [values, setValues] = useState<number>(0);
 	const [percentValue, setPercentValue] = useState<number>(0);
 	useEffect(() => {
@@ -15,7 +15,7 @@ const Widgets = ({color, heading, amount, value, percent}: WidgetsProps) => {
 		}, 50);
 		const interval2 = setInterval(() => {
 			if (value) {
-				setValues((prev) => (prev < value ? prev + 10 : value));
+				setValues((prev) => (prev < value ? prev + 50 : value));
 			}
 		}, 1);
 		return () => {
@@ -50,7 +50,7 @@ const Widgets = ({color, heading, amount, value, percent}: WidgetsProps) => {
 				}}
 				className="cibefore duration-300 relative w-20 h-20 grid place-items-center rounded-[50%]"
 			>
-				<span style={{color}} className=" z-40">
+				<span style={{ color }} className=" z-40">
 					{percentValue}%
 				</span>
 			</div>
